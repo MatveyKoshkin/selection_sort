@@ -1,0 +1,23 @@
+#include "header.h"
+int main(int argc, char* argv[])
+{
+	int size;
+	cout << "enter the size of the array: \n";
+	cin >> size;
+	int* a = (int*)malloc(size * sizeof(int));
+	for (int i = 0; i < size; i++)
+	{
+		cout << "a[" << i << "]=";
+		cin >> a[i];
+	}
+	cout << "result \n";
+	selection_sort(a, size);
+	for (int i = 0; i < size; i++)
+	{
+		cout << a[i];
+	}
+	cout << "\n";
+	free(a);
+	system("pause");
+	return 0;
+}
